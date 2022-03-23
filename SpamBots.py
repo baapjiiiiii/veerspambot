@@ -724,7 +724,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await event.edit(f"❤️ νιρ ❤️ ѕραм 🔥!\n`{ms}` ms\n ❤️ νιρ ❤️ ѕραм 🔥")
+        await event.edit(f"❤️🥺😘!\n`{ms}` ms\n ❤️ νιρ ❤️ ѕραм 🔥")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -860,58 +860,10 @@ def user_full_name(user):
     full_name = " ".join(names)
     return full_name
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-async def get_users(event):
-    sender = await event.get_sender()
-    me = await event.client.get_me()
-    if not sender.id == me.id:
-        shivam = await event.reply("processing...")
-    else:
-        shivam = await event.reply("processing...")
-    alcoholic = await get_chatinfo(event)
-    chat = await event.get_chat()
-    if event.is_private:
-        return await shivam.edit("Sorry, Cant add users here")
-    s = 0
-    f = 0
-    error = "None"
 
-    await shivam.edit("TerminalStatus\n\nCollecting Users.......")
-    async for user in event.client.iter_participants(alcoholic.full_chat.id):
-        try:
-            if error.startswith("Too"):
-                return await shivam.edit(
-                    f"Terminal Finished With Error\n(May Got Limit Error from telethon Please try agin Later)\nError : \n{error}\n\n• Invited {s} people \n• Failed to Invite {f} people"
-                )
-            await event.client(
-                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
-            )
-            s = s + 1
-            await shivam.edit(
-                f"Terminal Running...\n\n• Invited {s} people \n• Failed to Invite {f} people\n\n× LastError: {error}"
-            )
-        except Exception as e:
-            error = str(e)
-            f = f + 1
-    return await shivam.edit(
-        f"Terminal Finished \n\n• Successfully Invited {s} people \n• failed to invite {f} people #Shadow_On_Fire"
-    )
 #################
     
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
+
 from telethon.tl import functions
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest

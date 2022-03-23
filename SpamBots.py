@@ -329,7 +329,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("ℂℍ𝔸𝕃𝕆 𝔾𝔸ℕ𝔻 𝕄𝔸ℝℕ𝔼 𝕁𝕆𝕀ℕ ℍ𝕆 𝔾𝔸𝕐𝔸")
+                await event.edit("ℂℍ𝔸𝕃𝕆 𝔾𝔸ℕ𝔻 𝕄𝔸ℝℕ𝔼 ")
             except Exception as e:
                 await event.edit(str(e))
         else:
@@ -356,7 +356,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(ImportChatInviteRequest(bc))
-                await event.edit("ℙℝ𝕀𝕍𝔸𝕋𝔼 ℝ𝔸ℕ𝔻𝕀 🤤")
+                await event.edit("kopche me ghus gaya 🥵")
             except Exception as e:
                 await event.edit(str(e))
         else:
@@ -384,7 +384,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
-                await event.edit("𝔹𝔸ℍ𝕌𝕋 𝔾𝔸ℕ𝔻 𝕄𝔸ℝ𝕃𝕀 𝔾ℝ𝕆𝕌ℙ 𝕄𝔸𝕀  ℂℍ𝕆ℝℕ𝔼 𝕂𝔸 𝕋𝕀𝕄𝔼 𝔸𝔸 𝔾𝔸𝕐𝔸")
+                await event.edit("leaved successfully 😂😆")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -578,7 +578,7 @@ async def spam(e):
                 caption = f"{username} {reply}"
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
         elif e.reply_to_msg_id:
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
@@ -591,7 +591,7 @@ async def spam(e):
                 caption = f"{username} {reply}"
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.5)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
 
@@ -724,7 +724,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await event.edit(f"🤤𝐆𝐀𝐍𝐃!\n`{ms}` ms\n⚔️𝗦𝗛4𝗗𝗢𝗪 𝗦𝗣𝗔𝗠𝗕𝗢𝗧⚔️")
+        await event.edit(f"❤️ νιρ ❤️ ѕραм 🔥!\n`{ms}` ms\n ❤️ νιρ ❤️ ѕραм 🔥")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -739,7 +739,7 @@ async def ping(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nℝ𝕌𝕂 𝕄𝕌𝕋ℍ 𝕄𝔸ℝ𝕃𝕆 𝕋ℍ𝕆𝔻𝔸"
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nℝ𝕌𝕂 2 min baad krna ping 🔥🥵"
         await e.reply(text, parse_mode=None, link_preview=None)
         try:
             await idk.disconnect()
@@ -797,7 +797,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "[ 𝐒𝐇4𝐃𝐎𝐖 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 ]\n\n𝐒𝐓𝐀𝐑𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.ping\n.restart\n\n𝐉𝐎𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.join\n.pjoin\n.leave\n\n𝐒𝐏𝐀𝐌 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\n𝐒𝐂𝐑𝐀𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.scrap\n\n𝐅𝐎𝐑 𝐍𝐄𝐄𝐃 𝐀𝐍𝐘 𝐇𝐄𝐋𝐏 𝐀𝐁𝐎𝐔𝐓 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 𝐉𝐎𝐈𝐍 @SH4DOW_SPAMBOTSUPPORT"
+        text = "[  ❤️ νιρ ❤️ ѕραм 🔥 ]\n\n𝐒𝐓𝐀𝐑𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.ping\n.restart\n\n𝐉𝐎𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.join\n.pjoin\n.leave\n\n𝐒𝐏𝐀𝐌 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\n𝐒𝐂𝐑𝐀𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.scrap\n\n𝐅𝐎𝐑 𝐍𝐄𝐄𝐃 𝐀𝐍𝐘 𝐇𝐄𝐋𝐏 𝐀𝐁𝐎𝐔𝐓 🆅🅸🅿 ❤️ 🆂🅿🅰🅼 🅱🅾🆃 visit here @Baapjiiiiiiiiii"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
